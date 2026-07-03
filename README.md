@@ -13,6 +13,10 @@ tracks the catalog entities a user opens and surfaces them again:
 Everything is stored in the browser (`localStorage`) per user — **no backend,
 database, or API is required.**
 
+| Recently Visited | Top Visited |
+| --- | --- |
+| ![Recently Visited widget](docs/images/recently-visited.png) | ![Top Visited widget](docs/images/top-visited.png) |
+
 The plugin ships for **both** frontend systems:
 
 | Frontend system | Import from |
