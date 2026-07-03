@@ -1,5 +1,5 @@
 {
-  "name": "@skywize/backstage-plugin-visited",
+  "name": "@skywize-gmbh/backstage-plugin-visited",
   "version": "0.1.0",
   "description": "Backstage frontend plugin: \"Top Visited\" and \"Recently Visited\" homepage widgets plus a shared, extensible \"Local data\" settings tab. Supports both the classic and the New Frontend System.",
   "keywords": [
@@ -58,7 +58,10 @@
   "backstage": {
     "role": "frontend-plugin",
     "pluginId": "visited",
-    "pluginPackage": "@skywize/backstage-plugin-visited"
+    "pluginPackage": "@skywize-gmbh/backstage-plugin-visited",
+    "pluginPackages": [
+      "@skywize-gmbh/backstage-plugin-visited"
+    ]
   },
   "sideEffects": [
     "**/registerVisitedReset.*",
@@ -93,6 +96,7 @@
     "@backstage/test-utils": "^1.7.17",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.0.0",
     "@types/react": "^18.0.0"
   },
   "files": [

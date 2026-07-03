@@ -1,5 +1,5 @@
 /**
- * New Frontend System entry point for `@skywize/backstage-plugin-visited`.
+ * New Frontend System entry point for `@skywize-gmbh/backstage-plugin-visited`.
  *
  * Provides:
  *  - two home-page widgets ("Top Visited", "Recently Visited"), installable
@@ -7,6 +7,7 @@
  *  - a "Local data" tab under user settings, rendering the shared reset
  *    registry (see {@link registerLocalDataReset}).
  */
+import React from 'react';
 import {
   createFrontendPlugin,
   SubPageBlueprint,
@@ -72,7 +73,7 @@ const localDataSettingsPage = SubPageBlueprint.make({
  * The New Frontend System plugin. Install it in `packages/app/src/App.tsx`:
  *
  * ```ts
- * import visitedPlugin from '@skywize/backstage-plugin-visited/alpha';
+ * import visitedPlugin from '@skywize-gmbh/backstage-plugin-visited/alpha';
  * export const app = createApp({ features: [visitedPlugin] });
  * ```
  */

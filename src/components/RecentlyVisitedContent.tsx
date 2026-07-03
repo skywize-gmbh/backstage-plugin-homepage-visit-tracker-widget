@@ -1,3 +1,4 @@
+import React from 'react';
 import { RecentVisitedEntities } from '../visits/EntityVisitCards';
 import { DEFAULT_KINDS, DEFAULT_LIMIT } from '../constants';
 

@@ -1,11 +1,11 @@
 /**
- * @skywize/backstage-plugin-visited
+ * @skywize-gmbh/backstage-plugin-visited
  *
  * "Top Visited" and "Recently Visited" homepage widgets plus a shared,
  * extensible "Local data" settings tab — all backed by browser-local storage.
  *
  * This is the classic (legacy) frontend-system entry point. For the New
- * Frontend System, import from `@skywize/backstage-plugin-visited/alpha`.
+ * Frontend System, import from `@skywize-gmbh/backstage-plugin-visited/alpha`.
  */
 
 // Plugin + homepage cards (legacy).

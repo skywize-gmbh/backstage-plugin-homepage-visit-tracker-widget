@@ -1,4 +1,4 @@
-# @skywize/backstage-plugin-visited
+# @skywize-gmbh/backstage-plugin-visited
 
 A small, self-contained [Backstage](https://backstage.io) frontend plugin that
 tracks the catalog entities a user opens and surfaces them again:
@@ -17,8 +17,8 @@ The plugin ships for **both** frontend systems:
 
 | Frontend system | Import from |
 | --- | --- |
-| Classic (legacy) | `@skywize/backstage-plugin-visited` |
-| New Frontend System | `@skywize/backstage-plugin-visited/alpha` |
+| Classic (legacy) | `@skywize-gmbh/backstage-plugin-visited` |
+| New Frontend System | `@skywize-gmbh/backstage-plugin-visited/alpha` |
 
 Verified against Backstage `1.50.x` (`@backstage/frontend-plugin-api` `^0.16`,
 `@backstage/plugin-home-react` `^0.1.37`).
@@ -30,7 +30,7 @@ Verified against Backstage `1.50.x` (`@backstage/frontend-plugin-api` `^0.16`,
 From your Backstage repo root:
 
 ```bash
-yarn --cwd packages/app add @skywize/backstage-plugin-visited
+yarn --cwd packages/app add @skywize-gmbh/backstage-plugin-visited
 ```
 
 ---
@@ -42,7 +42,7 @@ yarn --cwd packages/app add @skywize/backstage-plugin-visited
 ```ts
 // packages/app/src/App.tsx
 import { createApp } from '@backstage/frontend-defaults';
-import visitedPlugin from '@skywize/backstage-plugin-visited/alpha';
+import visitedPlugin from '@skywize-gmbh/backstage-plugin-visited/alpha';
 
 export const app = createApp({
   features: [
@@ -66,7 +66,7 @@ In the New Frontend System this is typically done with an entity-page card or
 content extension that renders `<VisitTracker />` (it renders nothing):
 
 ```tsx
-import { VisitTracker } from '@skywize/backstage-plugin-visited';
+import { VisitTracker } from '@skywize-gmbh/backstage-plugin-visited';
 ```
 
 If you keep a custom `EntityPage`, simply render `<VisitTracker />` once inside
@@ -82,7 +82,7 @@ Add the cards to your custom home page:
 
 ```tsx
 // packages/app/src/components/home/HomePage.tsx
-import { MostVisitedCard, RecentlyVisitedCard } from '@skywize/backstage-plugin-visited';
+import { MostVisitedCard, RecentlyVisitedCard } from '@skywize-gmbh/backstage-plugin-visited';
 
 // inside your <HomePageGrid> / layout:
 <MostVisitedCard />
@@ -94,7 +94,7 @@ import { MostVisitedCard, RecentlyVisitedCard } from '@skywize/backstage-plugin-
 ```tsx
 // packages/app/src/App.tsx
 import { SettingsLayout } from '@backstage/plugin-user-settings';
-import { LocalDataSettingsContent } from '@skywize/backstage-plugin-visited';
+import { LocalDataSettingsContent } from '@skywize-gmbh/backstage-plugin-visited';
 
 const settingsPage = (
   <SettingsLayout>
@@ -112,7 +112,7 @@ Drop the tracker into your entity page:
 
 ```tsx
 // packages/app/src/components/catalog/EntityPage.tsx
-import { VisitTracker } from '@skywize/backstage-plugin-visited';
+import { VisitTracker } from '@skywize-gmbh/backstage-plugin-visited';
 
 const entityPage = (
   <>
@@ -131,7 +131,7 @@ registered through a small, framework-agnostic API. This plugin registers its
 own row on import:
 
 ```ts
-import { registerLocalDataReset } from '@skywize/backstage-plugin-visited';
+import { registerLocalDataReset } from '@skywize-gmbh/backstage-plugin-visited';
 
 registerLocalDataReset({
   id: 'visited-entities',
@@ -145,7 +145,7 @@ registerLocalDataReset({
 homepage-layout plugin or feeds plugin:
 
 ```ts
-import { registerLocalDataReset } from '@skywize/backstage-plugin-visited';
+import { registerLocalDataReset } from '@skywize-gmbh/backstage-plugin-visited';
 
 registerLocalDataReset({
   id: 'homepage-layout',
