@@ -1,6 +1,6 @@
 {
   "name": "@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Backstage frontend plugin: \"Top Visited\" and \"Recently Visited\" homepage widgets plus a shared, extensible \"Local data\" settings tab. Supports both the classic and the New Frontend System.",
   "keywords": [
     "backstage",
