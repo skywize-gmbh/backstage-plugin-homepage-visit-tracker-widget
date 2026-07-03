@@ -25,6 +25,24 @@ Verified against Backstage `1.50.x` (`@backstage/frontend-plugin-api` `^0.16`,
 
 ---
 
+## Prerequisites
+
+This plugin adds widgets/cards to your app's **home page** — it does not create
+one. A clean `@backstage/create-app` scaffold has no home page by default, so
+you need [`@backstage/plugin-home`](https://backstage.io/docs/getting-started/homepage)
+installed and set up first:
+
+- **Classic (legacy) frontend system**: install `@backstage/plugin-home` and
+  mount a `<HomePageGrid>` (inside a `<HomePage>`) on your home route — that's
+  what `<MostVisitedCard />` / `<RecentlyVisitedCard />` render into.
+- **New Frontend System**: add `@backstage/plugin-home/alpha` to your `features`
+  in `createApp` — that's what provides the home page and the widget catalog
+  this plugin's widgets register themselves into.
+
+Without one of the above, installing this plugin alone won't show anything.
+
+---
+
 ## Installation
 
 From your Backstage repo root:
@@ -138,21 +156,6 @@ registerLocalDataReset({
   title: 'Visited entities',
   description: 'The data behind the “Top Visited” and “Recently Visited” widgets.',
   action: () => clearEntityVisits(),
-});
-```
-
-**Any other plugin can add its own row the same way** — for example a future
-homepage-layout plugin or feeds plugin:
-
-```ts
-import { registerLocalDataReset } from '@skywize-gmbh/backstage-plugin-homepage-visit-tracker-widget';
-
-registerLocalDataReset({
-  id: 'homepage-layout',
-  title: 'My homepage layout',
-  description: 'Your personal homepage arrangement.',
-  buttonLabel: 'Reset to default',
-  action: () => storageApi.forBucket('home.customHomepage').remove('home'),
 });
 ```
 
